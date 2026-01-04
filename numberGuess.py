@@ -1,5 +1,6 @@
 # Number Guessing Game
 # Version 0.3
+# Developed by Gulshan
 # Simple CLI game to practice loops, conditionals, and input handling
 
 import random
