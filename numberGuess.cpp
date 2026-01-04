@@ -1,5 +1,5 @@
 
-// Developed by Gulshan for Google Apprenticeship 2025
+// Developed by Gulshan
 
 #include <iostream>
 #include <cstdlib>
