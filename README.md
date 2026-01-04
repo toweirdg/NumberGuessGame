@@ -1,18 +1,24 @@
-# Number Guessing Game 🎯
+# Number Guessing Game
 
-Simple number guessing game implemented in both **Python** and **C++**.
+A simple command-line number guessing game written in Python and C++.
 
-- Random number between 1 and 100
-- User inputs guesses
-- Game gives feedback: Too high / Too low / Correct
+## Why I Built This
+I built this project to practice basic programming concepts such as loops,
+conditionals, and user input handling.
 
 ## How to Run
 
 ### Python
-
+```bash
 python numberGuess.py
+```
+What I Improved
+- Added input validation to prevent crashes on invalid input.
+-Improved variable naming for better readability.
 
 ### C++
-
+```bash
 g++ numberGuess.cpp -o numberGuess
 ./numberGuess
+```
+
