@@ -14,7 +14,7 @@ python numberGuess.py
 ```
 What I Improved
 - Added input validation to prevent crashes on invalid input.
--Improved variable naming for better readability.
+- Improved variable naming for better readability.
 
 ### C++
 ```bash
