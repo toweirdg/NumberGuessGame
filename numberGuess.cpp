@@ -1,5 +1,6 @@
-
+// Number Guessing Game
 // Developed by Gulshan
+// Simple CLI project to practice loops, conditionals, and input handling
 
 #include <iostream>
 #include <cstdlib>
@@ -8,25 +9,39 @@
 using namespace std;
 
 int main() {
-    srand(time(0));
-    int number = rand() % 100 + 1;
-    int guess, attempts = 0;
+    // Seed random number generator once at program start
+    srand(static_cast<unsigned int>(time(nullptr)));
+
+    int targetNumber = rand() % 100 + 1;
+    int userGuess = 0;
+    int attemptCount = 0;
 
     cout << "Guess a number between 1 and 100\n";
 
-    do {//Loop
+    while (true) {
         cout << "Enter your guess: ";
-        cin >> guess;//Input Handling
-        attempts++;
+        cin >> userGuess;
 
-        if (guess > number) {//Conditionals
+        // Basic input validation
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Please enter a valid number.\n";
+            continue;
+        }
+
+        attemptCount++;
+
+        if (userGuess > targetNumber) {
             cout << "Too high!\n";
-        } else if (guess < number) {
+        } else if (userGuess < targetNumber) {
             cout << "Too low!\n";
         } else {
-            cout << "Congratulations! You guessed it in " << attempts << " tries.\n";
+            cout << "Congratulations! You guessed it in "
+                 << attemptCount << " attempts.\n";
+            break;
         }
-    } while (guess != number);
+    }
 
     return 0;
 }
